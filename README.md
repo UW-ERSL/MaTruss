@@ -11,9 +11,10 @@ University of Wisconsin-Madison
 
 
 ## Abstract
-A critical step in topology optimization (TO) is finding sensitivities. Manual derivation and implementation of the sensitivities can be quite laborious and error-prone, especially for non-trivial objectives, constraints and material models. An alternate approach is to utilize automatic differentiation (AD). While AD has been conceptualized over decades, and has also been applied in TO, wider adoption has largely been absent.
+The engineering design process often entails optimizing the underlying geometry while simultaneously selecting a suitable material. For a certain class of simple problems, the two are separable where, for example, one can first select an optimal material, and then optimize the geometry. However, in general, the two are not separable. Furthermore, the discrete nature of material selection is not compatible with gradient-based geometry optimization, making simultaneous optimization challenging.
 
-In this educational paper, we aim to reintroduce AD for TO and make it easily accessible through illustrative codes. In particular, we employ [JAX](https://github.com/google/jax)  , a high-performance Python library for automatically computing sensitivities from a user defined TO problem. The resulting framework, referred to here as AuTO, is illustrated through several examples in compliance minimization, compliant mechanism design and microstructural design.
+In this paper, we propose the use of variational autoencoders (VAE) for simultaneous optimization. First, a data-driven VAE is used to project the discrete material database onto a continuous and differentiable latent space. This is then coupled with a fully-connected neural network, embedded with a finite-element solver, to simultaneously optimize the material and geometry. The neural-network's built-in gradient optimizer and back-propagation are exploited during optimization.
 
+The proposed framework is demonstrated using trusses, where an optimal material needs to be chosen from a database, while simultaneously optimizing the cross-sectional areas of the truss members. Several numerical examples illustrate the efficacy of the proposed framework
 
 *contributed equally
