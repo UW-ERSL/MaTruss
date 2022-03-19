@@ -33,9 +33,9 @@ class MaterialEncoder:
       reconLoss =  ((self.trainingData - predData)**2).sum()
       loss = reconLoss + klLoss 
       loss.backward()
-      convgHistory['reconLoss'].append(reconLoss)
-      convgHistory['klLoss'].append(klLoss/klFactor) # save unscaled loss
-      convgHistory['loss'].append(loss)
+      convgHistory['reconLoss'].append(reconLoss.item())
+      convgHistory['klLoss'].append(klLoss.item()/klFactor) # save unscaled loss
+      convgHistory['loss'].append(loss.item())
       opt.step()
       if(epoch%500 == 0):
         print('Iter {:d} reconLoss {:.2E} klLoss {:.2E} loss {:.2E}'.\
