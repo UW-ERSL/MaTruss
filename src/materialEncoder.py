@@ -41,7 +41,7 @@ class MaterialEncoder:
         print('Iter {:d} reconLoss {:.2E} klLoss {:.2E} loss {:.2E}'.\
               format(epoch, reconLoss.item(), klLoss.item(), loss.item()))
     self.vaeNet.encoder.isTraining = False
-    with open('./results/vaeTrained.pkl', 'wb+') as f:
+    with open('../results/vaeTrained.pkl', 'wb+') as f:
       pickle.dump([self.vaeNet.encoder.state_dict()], f)
     return convgHistory
   #--------------------------#
