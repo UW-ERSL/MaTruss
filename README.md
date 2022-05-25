@@ -8,7 +8,11 @@
 
 University of Wisconsin-Madison 
 
+## Dependencies
 
+PyTorch, scipy, numpy, matplotlib
+
+For the sparse version of PyTorch solve, https://github.com/flaport/torch_sparse_solve
 
 ## Abstract
 The engineering design process often entails optimizing the underlying geometry while simultaneously selecting a suitable material. For a certain class of simple problems, the two are separable where, for example, one can first select an optimal material, and then optimize the geometry. However, in general, the two are not separable. Furthermore, the discrete nature of material selection is not compatible with gradient-based geometry optimization, making simultaneous optimization challenging.
