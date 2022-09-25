@@ -1,6 +1,6 @@
 # MaTruss
 
-[Integrating Material Selection with Design Optimization via Neural Networks](https://arxiv.org/abs/2112.12566)
+[Integrating Material Selection with Design Optimization via Neural Networks](https://link.springer.com/article/10.1007/s00366-022-01736-0)
 
 [Aaditya Chandrasekhar*](https://aadityacs.github.io/), [Saketh Sridhara*](https://sakethsridhara.github.io/), [Krishnan Suresh](https://directory.engr.wisc.edu/me/faculty/suresh_krishnan)  
 
